@@ -1,4 +1,6 @@
+
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/ui_helper.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +15,20 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          // textTheme: TextTheme(
+          //   headline1: TextStyle(fontSize: 30, fontWeight: FontWeight.w400),
+          //   subtitle1: TextStyle(fontSize: 20, fontWeight: FontWeight.w200),
+          // )
+          textTheme: TextTheme(
+              headline1: TextStyle(
+                  color: Colors.pink,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
+              subtitle1: TextStyle(
+                  color: Colors.yellow,
+                  fontSize: 45,
+                  fontWeight: FontWeight.bold))),
       home: const MyHomePage(),
     );
   }
@@ -30,10 +44,226 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    //var arrName = ['Ayush', 'Raj', 'Deep', 'Rina', 'Riya', 'Sahil', 'Pooja'];
     return Scaffold(
       appBar: AppBar(
         title: const Text("Flutter Container"),
       ),
+
+      //card Widget
+
+      // body: Center(
+      //   child: Card(
+      //     shadowColor: Colors.pink,
+      //     elevation: 30,
+      //     child: Padding(
+      //       padding: const EdgeInsets.all(8),
+      //       child: Text("Ayush Ginoya"),
+      //     ),
+      //   ),
+      // ),
+
+      //Style and themes
+
+      // body: Center(
+      //   child: Column(
+      //     // children: [
+      //     //   Text(
+      //     //     "AYUSH",
+      //     //     style: Theme.of(context)
+      //     //         .textTheme
+      //     //         .headline1!
+      //     //         .copyWith(color: Colors.pink),
+      //     //   ),
+      //     //   Text(
+      //     //     "AYUSHI",
+      //     //     style: Theme.of(context).textTheme.subtitle1,
+      //     //   ),
+      //     //   Text(
+      //     //     "DEEP",
+      //     //     style: Theme.of(context)
+      //     //         .textTheme
+      //     //         .headline1!
+      //     //         .copyWith(color: Colors.green),
+      //     //   ),
+      //     //   Text(
+      //     //     "DEEPIKA",
+      //     //     style: Theme.of(context).textTheme.subtitle1,
+      //     //   )
+      //     // ],
+
+      //     children: [
+      //       Text(
+      //         "AYUSH",
+      //         style: Theme.of(context)
+      //             .textTheme
+      //             .headline1!
+      //             .copyWith(color: Colors.pink),
+      //       ),
+      //       Text(
+      //         "AYUSHI",
+      //         style: Theme.of(context).textTheme.subtitle1,
+      //       ),
+      //       Text("DEEP", style: myTextStyle33(textColor: Colors.blue)),
+      //       Text(
+      //         "DEEPIKA",
+      //         style: myTextStyle11(),
+      //       )
+      //     ],
+      //   ),
+      // ),
+
+      //CustomFont
+
+      // body: Center(
+      //   child: Text(
+      //     "Ayush Ginoya",
+      //     style: TextStyle(
+      //         color: Colors.pink,
+      //         fontFamily: 'googleFont',
+      //         fontSize: 25,
+      //         fontWeight: FontWeight.bold),
+      //   ),
+      // ),
+
+      // //CircleAvatar
+
+      // body: Center(
+      //   child: CircleAvatar(
+      //     backgroundImage: AssetImage('assets/Images/Hey.jpg'),
+      //     backgroundColor: Colors.green,
+      //     maxRadius: 100,
+      //     //minRadius: 40,
+      //   ),
+      // ),
+
+      //ListTitel and ListViewBuilder
+
+      // body: ListView.separated(
+      //   itemCount: arrName.length,
+      //   separatorBuilder: (BuildContext context, int index) {
+      //     return Divider(
+      //       color: Colors.orange,
+      //       height: 30,
+      //     );
+      //   },
+      //   itemBuilder: (BuildContext context, int index) {
+      //     return ListTile(
+      //       leading: Icon(Icons.add),
+      //       trailing: Text('$index'),
+      //       title: Text(arrName[index]),
+      //       subtitle: Text("Student"),
+      //     );
+      //   },
+      // ),
+
+      //container decoratation
+
+      // body: Container(
+      //     //width: double.infinity,
+      //     //height: double.infinity,
+      //     child: Center(
+      //   child: Container(
+      //     width: 150,
+      //     height: 150,
+      //     decoration: BoxDecoration(
+      //         color: Colors.blue, //borderRadius: BorderRadius.circular(10)),
+      //         // borderRadius: BorderRadius.only(
+      //         //     topLeft: Radius.circular(15),          //if u give shape then non need to boaderradious
+      //         //     bottomRight: Radius.circular(15)),
+      //         border: Border.all(width: 3, color: Colors.pink),
+      //         boxShadow: [
+      //           BoxShadow(
+      //               blurRadius: 14, spreadRadius: 7, color: Colors.black),
+      //         ],
+      //         shape: BoxShape.circle),
+      //   ),
+      // ))
+
+      //ListView-separated
+
+      // body: ListView.separated(
+      //     itemBuilder: ((context, index) {
+      //       return Center(
+      //           child: Padding(
+      //         padding: const EdgeInsets.all(5),
+      //         child: Text(
+      //           arrName[index],
+      //           style: TextStyle(fontSize: 25),
+      //         ),
+      //       ));
+      //     }),
+      //     separatorBuilder: (context, index) {
+      //       return Divider(
+      //         height: 150,
+      //         thickness: 2,
+      //       );
+      //     },
+      //     itemCount: arrName.length
+      //     //itemExtent: 200, you can not use it in separated class
+      //     ),
+
+      //ListView-builder
+
+      // body: ListView.builder(
+      //   itemBuilder: (context, index) {
+      //     return Padding(
+      //       padding: const EdgeInsets.all(10),
+      //       child: Text(
+      //         arrName[index],
+      //         style: TextStyle(fontSize: 30),
+      //       ),
+      //     );
+      //   },
+      //   itemCount: arrName.length,
+      //   itemExtent: 200,
+      //   scrollDirection: Axis.horizontal,
+      // )
+
+      //ListView
+
+      // body: Center(
+      //   child: ListView(
+      //     scrollDirection: Axis.horizontal,
+      //     reverse: true, // ||         Five,Four<three,Two,One||
+      //     children: [
+      //       Padding(
+      //         padding: const EdgeInsets.all(8.0),
+      //         child: Text(
+      //           "One",
+      //           style: TextStyle(fontSize: 30),
+      //         ),
+      //       ),
+      //       Padding(
+      //         padding: const EdgeInsets.all(8),
+      //         child: Text(
+      //           "Two",
+      //           style: TextStyle(fontSize: 30),
+      //         ),
+      //       ),
+      //       Padding(
+      //         padding: const EdgeInsets.all(8),
+      //         child: Text(
+      //           "Three",
+      //           style: TextStyle(fontSize: 30),
+      //         ),
+      //       ),
+      //       Padding(
+      //         padding: const EdgeInsets.all(8),
+      //         child: Text(
+      //           "Four",
+      //           style: TextStyle(fontSize: 30),
+      //         ),
+      //       ),
+      //       Padding(
+      //           padding: const EdgeInsets.all(8),
+      //           child: Text(
+      //             "Five",
+      //             style: TextStyle(fontSize: 30),
+      //           ))
+      //     ],
+      //   ),
+      // )
 
       //ScrollView Widgets
 
