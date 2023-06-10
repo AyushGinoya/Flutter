@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/ui_helper.dart';
 
@@ -49,6 +48,124 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: const Text("Flutter Container"),
       ),
+
+      //showing a Date Picker - Alarm
+
+      // body: Center(
+      //   child: Container(
+      //     width: 300,
+      //     height: 300,
+      //     child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      //       Text(
+      //         "Selected Date: ",
+      //         style: TextStyle(fontSize: 25),
+      //       ),
+      //       ElevatedButton(
+      //           onPressed: () async {
+      //             DateTime? datePicked = await showDatePicker(
+      //                 context: context,
+      //                 initialDate: DateTime.now(),
+      //                 firstDate: DateTime(1900),
+      //                 lastDate: DateTime(2023));
+
+      //             if (datePicked != null) {
+      //               print(
+      //                   "Current : ${datePicked.day} - ${datePicked.month} - ${datePicked.year}");
+      //             }
+      //           },
+      //           child: const Text("Reset"))
+      //     ]),
+      //   ),
+      // ),
+
+      //Getting Cutterent Date and Time
+
+      // body: Center(
+      //   child: Container(
+      //     width: 300,
+      //     height: 300,
+      //     child: Column(
+      //       mainAxisAlignment: MainAxisAlignment.center,
+      //       children: [
+      //         // Text(
+      //         //   'Current time: $time ',
+      //         //   style: TextStyle(fontSize: 30),
+      //         // ), //$time.hour,$time.minite, $time.seconds
+
+      //         Text(
+      //             "Current time : ${DateFormat('EEEE').format(time)}", //yMMMMD,yMMMM,yMMMMEEEEd,EEEE,Hms
+      //             style: TextStyle(fontSize: 30)),
+
+      //         ElevatedButton(
+      //             onPressed: () {
+      //               setState(() {});
+      //             },
+      //             child: Text("Reset"))
+      //       ],
+      //     ),
+      //   ),
+      // ),
+
+      //TextField
+
+      // body: Center(
+      //   child: Container(
+      //     width: 250,
+      //     child: Column(
+      //       mainAxisAlignment: MainAxisAlignment.center,
+      //       children: [
+      //         TextField(
+      //           controller: email,
+      //           //enabled: false,    //u acn not write anything in TextField
+      //           //keyboardType: TextInputType.phone,
+
+      //           decoration: InputDecoration(
+      //             hintText: 'Enter Email',
+      //             focusedBorder: OutlineInputBorder(
+      //                 borderRadius: BorderRadius.circular(11),
+      //                 borderSide: BorderSide(color: Colors.pink,width: 2)),
+      //             enabledBorder: OutlineInputBorder(
+      //                 borderRadius: BorderRadius.circular(11),
+      //                 borderSide: BorderSide(color: Colors.green, width: 3)),
+      //             disabledBorder: OutlineInputBorder(
+      //                 borderRadius: BorderRadius.circular(11),
+      //                 borderSide: BorderSide(color: Colors.pink, width: 3)),
+      //             //suffixText: 'User name',
+      //             suffixIcon: IconButton(
+      //               icon: Icon(Icons.remove_red_eye),
+      //               onPressed: () {},
+      //             ),
+      //             prefixIcon: Icon(
+      //               Icons.email,
+      //               color: Colors.orange,
+      //             ),
+      //           ),
+      //         ),
+      //         Container(height: 20),
+      //         TextField(
+      //           controller: pass,
+
+      //           obscureText: true, // heaiding
+      //           obscuringCharacter: '*',
+      //           decoration: InputDecoration(
+      //               hintText: 'Enter Password',
+      //               border: OutlineInputBorder(
+      //                   borderRadius: BorderRadius.circular(11),
+      //                   borderSide: BorderSide(color: Colors.pink))),
+      //         ),
+      //         Container(height: 20),
+      //         ElevatedButton(
+      //             onPressed: () {
+      //               String uemail = email.text.toString();
+      //               String upass = pass.text;
+
+      //               print("Email : $uemail, Password : $upass");
+      //             },
+      //             child: Text("Login"))
+      //       ],
+      //     ),
+      //   ),
+      // )
 
       //card Widget
 
